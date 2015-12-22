@@ -12,6 +12,8 @@
 		AB62B5AF1C295B1800D3DBE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB62B5AD1C295B1800D3DBE5 /* Main.storyboard */; };
 		AB62B5B11C295B1800D3DBE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB62B5B01C295B1800D3DBE5 /* Assets.xcassets */; };
 		AB62B5B41C295B1800D3DBE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB62B5B21C295B1800D3DBE5 /* LaunchScreen.storyboard */; };
+		AB62B5BC1C295DE700D3DBE5 /* DownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62B5BB1C295DE700D3DBE5 /* DownloadButton.swift */; };
+		ABFB985F1C296481009A0354 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFB985E1C296481009A0354 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AB62B5B01C295B1800D3DBE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB62B5B31C295B1800D3DBE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB62B5B51C295B1800D3DBE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB62B5BB1C295DE700D3DBE5 /* DownloadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadButton.swift; sourceTree = "<group>"; };
+		ABFB985E1C296481009A0354 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				AB62B5A91C295B1800D3DBE5 /* AppDelegate.swift */,
 				AB62B5AB1C295B1800D3DBE5 /* ViewController.swift */,
+				AB62B5BB1C295DE700D3DBE5 /* DownloadButton.swift */,
+				ABFB985E1C296481009A0354 /* ProgressView.swift */,
 				AB62B5AD1C295B1800D3DBE5 /* Main.storyboard */,
 				AB62B5B01C295B1800D3DBE5 /* Assets.xcassets */,
 				AB62B5B21C295B1800D3DBE5 /* LaunchScreen.storyboard */,
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB62B5AC1C295B1800D3DBE5 /* ViewController.swift in Sources */,
+				ABFB985F1C296481009A0354 /* ProgressView.swift in Sources */,
+				AB62B5BC1C295DE700D3DBE5 /* DownloadButton.swift in Sources */,
 				AB62B5AA1C295B1800D3DBE5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +292,7 @@
 				AB62B5BA1C295B1800D3DBE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
