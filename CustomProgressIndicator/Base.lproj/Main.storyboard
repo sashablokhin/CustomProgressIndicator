@@ -22,18 +22,41 @@
                                 <animations/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Start download"/>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0p-j3-qQ5"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCk-ew-82x" customClass="ProgressView" customModule="CustomProgressIndicator" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2su-nB-Zam">
+                                <rect key="frame" x="348" y="408" width="0.0" height="0.0"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dCk-ew-82x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UO6-bG-Ys4"/>
+                            <constraint firstItem="dCk-ew-82x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d5N-kL-xnB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f3U-q8-0Mv" secondAttribute="bottom" constant="20" id="dRV-FT-ZhM"/>
+                            <constraint firstItem="2su-nB-Zam" firstAttribute="centerX" secondItem="dCk-ew-82x" secondAttribute="centerX" id="oi2-IC-ogi"/>
                             <constraint firstItem="f3U-q8-0Mv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vf6-Gc-tOX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="f3U-q8-0Mv" id="Ouc-hF-fFq"/>
+                        <outlet property="progressView" destination="dCk-ew-82x" id="UGA-1w-XTm"/>
+                        <outlet property="statusLabel" destination="2su-nB-Zam" id="hxW-C7-q6c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="219" y="418"/>
         </scene>
     </scenes>
 </document>

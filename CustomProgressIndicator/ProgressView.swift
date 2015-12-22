@@ -17,6 +17,11 @@ class ProgressView: UIView {
     
     // layer to show the dashed circle layer
     private var dashedLayer = CAShapeLayer()
+    
+    override func awakeFromNib() {
+        createLabel()
+        createProgressLayer()
+    }
 
     func createLabel() {
         progressLabel = UILabel()
@@ -43,7 +48,6 @@ class ProgressView: UIView {
         addConstraint(NSLayoutConstraint(item: progressLabel, attribute: .Bottom, relatedBy: .Equal, toItem: sizeProgressLabel, attribute: .Top, multiplier: 1.0, constant: -10.0))
     }
     
-
     private func createProgressLayer() {
         let startAngle = CGFloat(M_PI_2)
         let endAngle = CGFloat(M_PI * 2 + M_PI_2)
@@ -66,6 +70,28 @@ class ProgressView: UIView {
         dashedLayer.lineWidth = 2.0
         dashedLayer.path = progressLayer.path
         layer.insertSublayer(dashedLayer, below: progressLayer)
+    }
+
+    func animateProgressViewToProgress(progress: Float) {
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = CGFloat(progressLayer.strokeEnd)
+        animation.toValue = CGFloat(progress)
+        animation.duration = 0.2
+        animation.fillMode = kCAFillModeForwards
+        progressLayer.strokeEnd = CGFloat(progress)
+        progressLayer.addAnimation(animation, forKey: "animation")
+    }
+
+    func updateProgressViewLabelWithProgress(percent: Float) {
+        progressLabel.text = NSString(format: "%.0f %@", percent, "%") as String
+    }
+    
+    func updateProgressViewWith(totalSent: Float, totalFileSize: Float) {
+        sizeProgressLabel.text = NSString(format: "%.1f MB / %.1f MB", convertFileSizeToMegabyte(totalSent), convertFileSizeToMegabyte(totalFileSize)) as String
+    }
+    
+    private func convertFileSizeToMegabyte(size: Float) -> Float {
+        return (size / 1024) / 1024
     }
 }
 
